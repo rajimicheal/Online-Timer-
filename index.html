@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id="countdown"></p>
+    <script>
+        const startingMinutes  = 0;
+        let time = startingMinutes * 0;
+
+        const countdownEl = document.getElementById('countdown');
+        setInterval(updateCountdouwn , 1000);
+        function updateCountdouwn() {
+            const minutes  =Math.floor(time / 60)
+            let seconds = time % 60;
+            // seconds  =seconds < 10 ? '0' + seconds : seconds;
+            countdownEl.innerHTML  =`${minutes} : ${seconds}`;
+            time++;
+        }
+    </script>
+</body>
+</html>
